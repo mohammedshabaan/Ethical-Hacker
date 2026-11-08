@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ندوة الهكر الأخلاقي | استراتيجيات الاختراق، طبقات الإنترنت، وثورة ستارلينك</title>
+  
+  <!-- Meta SEO & Social -->
+  <meta name="description" content="الموقع الرسمي لندوة الهكر الأخلاقي: شرح تفصيلي لكيفية الاختراق ومراحله، كشف أسرار طبقات الإنترنت (السطحي، الديب، الدارك، والمارلين)، والتطور التكنولوجي لجهاز ستارلينك ومميزاته الفضائية.">
+  <meta name="keywords" content="الهكر الأخلاقي, Ethical Hacking, الديب ويب, الدارك ويب, ويب ماريانا, ستارلينك, SpaceX Starlink, اختبار الاختراق, الأمن السيبراني">
+  
+  <!-- Google Fonts: Cairo (Arabic) & JetBrains Mono (Terminal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Cyber Canvas & Ambient Lights -->
+  <canvas id="matrixCanvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+  <div class="cyber-radial-glow"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="cyber-navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand-badge">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"></path>
+            <path d="M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+            <path d="M12 13v5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>ندوة الهكر الأخلاقي <span>v2.6 // CYBER_SUMMIT</span></h1>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#ethical-hacking">الهكر الأخلاقي ومراحله</a></li>
+          <li><a href="#internet-layers">طبقات الإنترنت</a></li>
+          <li><a href="#starlink-tech">تكنولوجيا ستارلينك</a></li>
+          <li><a href="#terminal-section">الطرفية التفاعلية</a></li>
+          <li><a href="#quiz-section">اختبار الندوة والشهادة</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio Synthesizer Toggle -->
+        <button id="soundToggleBtn" class="icon-btn" title="تبديل المؤثرات الصوتية السايبر" aria-label="تبديل الصوت">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+          </svg>
+        </button>
+
+        <!-- Matrix Background Toggle -->
+        <button id="matrixToggleBtn" class="icon-btn" title="إيقاف / تشغيل تأثير الماتريكس" aria-label="تأثير الماتريكس">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+        </button>
+
+        <a href="#starlink-tech" class="btn-primary">استكشف ستارلينك</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="pulse-dot"></span>
+            <span>الملتقى التوعوي والتقني الشامل للأمن السيبراني</span>
+          </div>
+
+          <h2 class="hero-title">
+            ندوة الهكر الأخلاقي:
+            <br>
+            <span class="text-cyan glow-cyan">من أعماق الإنترنت إلى ثورة الفضاء</span>
+          </h2>
+
+          <p class="hero-lead">
+            دليل تفاعلي متقدم يستعرض أسرار الاختبارات الأمنية وكيفية الاختراق الأخلاقي، يغوص في طبقات الويب من السطحي والديب والدارك وصولاً لحقيقة ويب ماريانا، ويسلط الضوء على المعجزة التقنية لمنظومة ستارلينك الفضائية.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#ethical-hacking" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+              </svg>
+              ابدأ جولة محاور الندوة
+            </a>
+            <a href="#starlink-video-anchor" class="btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              شاهد استعراض ستارلينك
+            </a>
+            <a href="#quiz-section" class="btn-outline btn-outline-green">
+              اختبر معلوماتك واحصل على الشهادة
+            </a>
+          </div>
+
+          <div class="hero-badges-strip">
+            <div class="badge-item">
+              <span class="num">05</span>
+              <span class="lbl">مراحل اختراق احترافية</span>
+            </div>
+            <div class="badge-item">
+              <span class="num">04</span>
+              <span class="lbl">طبقات إنترنت مستكشفة</span>
+            </div>
+            <div class="badge-item">
+              <span class="num">IP67</span>
+              <span class="lbl">حماية عتاد ستارلينك</span>
+            </div>
+            <div class="badge-item">
+              <span class="num">100%</span>
+              <span class="lbl">أمن سيبراني دفاعي</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Terminal Teaser -->
+        <div class="hero-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">bash - ethical-hacker@seminar: ~</span>
+            <span class="mono" style="font-size:0.75rem;color:var(--green)">[ONLINE]</span>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line">
+              <span class="term-prompt">sec@hub:~$</span>
+              <span class="term-cmd">cat /etc/seminar-agenda.conf</span>
+            </div>
+            <div class="term-line term-out">
+              <span class="term-badge success">SESSION_1</span> الهكر الأخلاقي: المنهجية والمراحل الخمس
+            </div>
+            <div class="term-line term-out">
+              <span class="term-badge info">SESSION_2</span> أعماق الويب: من السطحي إلى أسطورة ماريانا
+            </div>
+            <div class="term-line term-out">
+              <span class="term-badge warn">SESSION_3</span> ستارلينك: تكنولوجيا LEO ومواصفات الأمان الفضائي
+            </div>
+            <div class="term-line" style="margin-top: 10px;">
+              <span class="term-prompt">sec@hub:~$</span>
+              <span class="term-cmd">nmap -sV --script vuln starlink-gateway.local</span>
+            </div>
+            <div class="term-line term-out">
+              Scanning 10.0.0.1... Beamforming Antenna: Phased Array active.
+              Encryption: Quantum-resistant space laser link active.
+              Status: <span style="color:var(--green)">SECURE & AIR-GAPPED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         AGENDA CARDS (Quick Navigation)
+         ========================================== -->
+    <section class="agenda-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">STRUCTURE // محاور الندوة</span>
+          <h2 class="section-title">المحاور الرئيسية لندوة الهكر الأخلاقي</h2>
+          <p class="section-desc">تم تصميم هذه الندوة لربط المعرفة النظرية بالتطبيق العملي والتطورات التكنولوجية المتسارعة في عالم الفضاء والشبكات.</p>
+        </div>
+
+        <div class="agenda-grid">
+          <div class="agenda-card">
+            <div class="agenda-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>المحور الأول: الهكر الأخلاقي</h3>
+            <p>تعريف الاختراق الأخلاقي، تصنيفات المخترقين (قبعات بيضاء وسوداء)، والمراحل الخمس المعتمدة دولياً لاختبار الاختراق.</p>
+            <a href="#ethical-hacking" class="agenda-link">
+              <span>استكشف المراحل والأدوات</span>
+              <span class="mono">→</span>
+            </a>
+          </div>
+
+          <div class="agenda-card">
+            <div class="agenda-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3>المحور الثاني: طبقات الإنترنت</h3>
+            <p>الإنترنت السطحي (Surface)، العميق (Deep)، المظلم (Dark)، وفك لغز ويب ماريانا (المارلين) بين الخيال والواقع التقني.</p>
+            <a href="#internet-layers" class="agenda-link">
+              <span>الغوص في الأعماق</span>
+              <span class="mono">→</span>
+            </a>
+          </div>
+
+          <div class="agenda-card">
+            <div class="agenda-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3>المحور الثالث: ثورة ستارلينك</h3>
+            <p>استعراض التطور التكنولوجي لأقمار LEO، مشاهدة الفيديو التوضيحي، وتحميل وتحليل وثيقة المواصفات القياسية الرسمية.</p>
+            <a href="#starlink-tech" class="agenda-link">
+              <span>شاهد العتاد والفيديو</span>
+              <span class="mono">→</span>
+            </a>
+          </div>
+
+          <div class="agenda-card">
+            <div class="agenda-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>المحور الرابع: التقييم والشهادة</h3>
+            <p>اختبار تفاعلي لقياس استيعاب المشاركين، وتوليد شهادة حضور إلكترونية رسمية للندوة قابلة للتنزيل والطباعة فورياً.</p>
+            <a href="#quiz-section" class="agenda-link">
+              <span>ابدأ الاختبار الآن</span>
+              <span class="mono">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE 1: ETHICAL HACKING DEEP DIVE
+         ========================================== -->
+    <section id="ethical-hacking" class="hacking-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">MODULE 01 // الدليل الشامل</span>
+          <h2 class="section-title">كيفية الاختراق من منظور الهكر الأخلاقي</h2>
+          <p class="section-desc">
+            الهكر الأخلاقي ليس مجرد هجوم؛ بل هو منهجية هندسية منضبطة تهدف إلى محاكاة تفكير المهاجمين لكشف الثغرات قبل أن يستغلها مجرمو الإنترنت، وسد الثغرات لحماية الأرواح والبيانات.
+          </p>
+        </div>
+
+        <!-- Concept Sub-Tabs -->
+        <div class="concept-tabs">
+          <button class="tab-btn active" data-tab="tab-types">
+            <span>أنواع المخترقين والفرق الأمنية</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-phases">
+            <span>المراحل الخمس لاختبار الاختراق</span>
+          </button>
+          <button class="tab-btn" data-tab="tab-defense">
+            <span>استراتيجيات الدفاع والحماية الاستباقية</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Types & Teams -->
+        <div id="tab-types" class="tab-pane active">
+          <div class="hacker-types-grid">
+            <!-- White Hat -->
+            <div class="type-card white-hat">
+              <div class="type-card-head">
+                <div class="hat-badge">🎩</div>
+                <div>
+                  <h4>الهكر الأخلاقي (White Hat)</h4>
+                  <span class="sub">ETHICAL HACKER / SECURITY AUDITOR</span>
+                </div>
+              </div>
+              <p>مختص أمني يعمل بإذن كتابي وتصريح رسمي مسبق. يستخدم أحدث أدوات الاختراق بهدف اختبار دفاعات المنشأة وتقديم تقارير تصحيحية.</p>
+              <ul>
+                <li>يعمل في إطار القانون وحقوق الخصوصية.</li>
+                <li>يساعد في الحصول على شهادات الأمان (ISO 27001, PCI-DSS).</li>
+                <li>يكتشف الثغرات ويوثق آلية سدها قبل تسريبها.</li>
+              </ul>
+            </div>
+
+            <!-- Black Hat -->
+            <div class="type-card black-hat">
+              <div class="type-card-head">
+                <div class="hat-badge">🕵️‍♂️</div>
+                <div>
+                  <h4>المخترق الخبيث (Black Hat)</h4>
+                  <span class="sub">CYBER CRIMINAL / CRACKER</span>
+                </div>
+              </div>
+              <p>يخترق الأنظمة بدون إذن أو وجه حق، مدفوعاً بدوافع مالية أو تجسسية أو تخريبية، ويتسبب بأضرار بالغة للبنى التحتية.</p>
+              <ul>
+                <li>سرقة البيانات الحساسة وأرقام البطاقات المصرفية.</li>
+                <li>نشر برمجيات الفدية (Ransomware) وابتزاز الضحايا.</li>
+                <li>بيع الثغرات في أسواق الدارك ويب السرية.</li>
+              </ul>
+            </div>
+
+            <!-- Grey Hat -->
+            <div class="type-card grey-hat">
+              <div class="type-card-head">
+                <div class="hat-badge">🧢</div>
+                <div>
+                  <h4>القبعة الرمادية (Grey Hat)</h4>
+                  <span class="sub">UNAUTHORIZED RESEARCHER</span>
+                </div>
+              </div>
+              <p>مخترق يكتشف الثغرات دون إذن مسبق لكنه لا يهدف للتدمير، بل يطالب بمكافأة (Bug Bounty) أو ينشر الثغرة للعلن لإحراج الشركة.</p>
+              <ul>
+                <li>موقفه القانوني مشكوك فيه ومعرّض للمساءلة الجنائية.</li>
+                <li>لا يزرع برمجيات خبيثة لكنه يخرق حدود الأمان دون تفويض.</li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Tab 2: 5 Phases Pipeline -->
+        <div id="tab-phases" class="tab-pane">
+          <div class="pipeline-box">
+            <h3 style="text-align:center;margin-bottom:1.5rem;font-size:1.4rem;">
+              المسار المعياري لمراحل اختبار الاختراق (The 5 Penetration Testing Phases)
+            </h3>
+            
+            <div class="pipeline-steps-nav">
+              <div class="pipeline-step-btn active" data-step="1">
+                <span class="step-num">01</span>
+                <span class="step-title">جمع المعلومات</span>
+              </div>
+              <div class="pipeline-step-btn" data-step="2">
+                <span class="step-num">02</span>
+                <span class="step-title">الفحص والمسح</span>
+              </div>
+              <div class="pipeline-step-btn" data-step="3">
+                <span class="step-num">03</span>
+                <span class="step-title">استغلال الثغرات</span>
+              </div>
+              <div class="pipeline-step-btn" data-step="4">
+                <span class="step-num">04</span>
+                <span class="step-title">تثبيت الوصول</span>
+              </div>
+              <div class="pipeline-step-btn" data-step="5">
+                <span class="step-num">05</span>
+                <span class="step-title">التوثيق والتنظيف</span>
+              </div>
+            </div>
+
+            <div id="phaseContentCard" class="phase-content-card">
+              <div class="phase-info">
+                <h3>المرحلة الأولى: الاستطلاع وجمع المعلومات (Reconnaissance & Footprinting)</h3>
+                <p>حجر الزاوية في اختبار الاختراق. هنا يجمع خبير الأمن السيبراني كافة البيانات المتاحة عن المؤسسة المستهدفة لتحديد أسطح الهجوم الممكنة والتعرف على البنية التحتية.</p>
+                <ul class="phase-details-list">
+                  <li><strong>النوع السلبي (Passive):</strong> <span>جمع معلومات عبر محركات البحث، سجلات WHOIS، منصات التواصل، وأرشيف الإنترنت دون إرسال أي حزم مباشرة للهدف.</span></li>
+                  <li><strong>النوع النشط (Active):</strong> <span>فحص نطاقات DNS والتفاعل المباشر لاكتشاف عناوين IP والمخدمات الخفية.</span></li>
+                  <li><strong>الهدف الاستراتيجي:</strong> <span>رسم خارطة أصول الهدف واكتشاف الموظفين والبنى التحتية السحابية المعرضة للخطر.</span></li>
+                </ul>
+                <div style="margin-top:1.25rem;">
+                  <div style="font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">الأدوات المستخدمة في هذه المرحلة:</div>
+                  <div class="tools-tags">
+                    <span class="tool-tag">OSINT Framework</span>
+                    <span class="tool-tag">theHarvester</span>
+                    <span class="tool-tag">Shodan.io</span>
+                    <span class="tool-tag">Whois</span>
+                    <span class="tool-tag">Maltego</span>
+                  </div>
+                </div>
+              </div>
+              <div class="phase-visual-box">
+                <div class="visual-title"># TERMINAL EVIDENCE / AUDIT LOG</div>
+                <pre style="white-space:pre-wrap;word-break:break-word;">[*] Executing: theHarvester -d target-corp.com -b all
+[+] Searching LinkedIn, Bing, Censys, Shodan...
+[+] Users found: 28 email addresses
+[+] Subdomains detected:
+    - mail.target-corp.com (198.51.100.12)
+    - vpn.target-corp.com  (198.51.100.14)
+    - dev-api.target-corp.com (198.51.100.88)
+[+] Open ports on dev-api: 80, 443, 8080 (Git exposed!)</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Defense & Mitigation -->
+        <div id="tab-defense" class="tab-pane">
+          <div class="defense-pillars-grid">
+            <div class="defense-pillar-item">
+              <h5>مبدأ الثقة الصفرية (Zero Trust Architecture)</h5>
+              <p>عدم الوثوق بأي جهاز أو مستخدم سواء كان داخل الشبكة أو خارجها. التحقق الدائم من الهوية، واستخدام التجزئة المصغرة (Micro-segmentation).</p>
+            </div>
+            <div class="defense-pillar-item">
+              <h5>جدران الحماية المتقدمة (WAF & Next-Gen Firewalls)</h5>
+              <p>فحص حزم البيانات عند طبقة التطبيقات (Layer 7) للتصدي لهجمات حقن SQL، واختراق نصوص المواقع XSS، وهجمات حجب الخدمة الموزعة DDoS.</p>
+            </div>
+            <div class="defense-pillar-item">
+              <h5>المصادقة متعددة العوامل (MFA / 2FA)</h5>
+              <p>تفعيل طبقات أمان إضافية لمنع استغلال كلمات المرور المسربة، بالاعتماد على مفاتيح الأمان الفيزيائية (FIDO2/U2F) وتطبيقات المصادقة.</p>
+            </div>
+            <div class="defense-pillar-item">
+              <h5>أنظمة المراقبة والاستجابة (SIEM & EDR)</h5>
+              <p>تجميع السجلات والبيانات الأمنية من كافة الأجهزة، وتحليلها آلياً باستخدام الذكاء الاصطناعي لاكتشاف الشذوذ السلوكي قبل تفاقمه.</p>
+            </div>
+            <div class="defense-pillar-item">
+              <h5>التشفير الشامل للبيانات (End-to-End Encryption)</h5>
+              <p>تشفير البيانات أثناء النقل (In-Transit) باستخدام بروتوكولات TLS 1.3، وأثناء السكون (At-Rest) باستخدام خوارزميات AES-256 المتطورة.</p>
+            </div>
+            <div class="defense-pillar-item">
+              <h5>إدارة وتحديث الترقيعات البرمجية (Patch Management)</h5>
+              <p>إغلاق الثغرات المعروفة فور صدور التحديثات الأمنية من الشركات المصنعة، وتقليل نافذة التعرض لهجمات اليوم الصفر (Zero-Day).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE 2: INTERNET LAYERS (SURFACE, DEEP, DARK, MARIANA)
+         ========================================== -->
+    <section id="internet-layers" class="layers-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">MODULE 02 // سبر الأغوار</span>
+          <h2 class="section-title">طبقات الإنترنت: من السطح إلى خندق ماريانا</h2>
+          <p class="section-desc">
+            الشبكة العنكبوتية تشبه جبلاً جليدياً عائماً في المحيط؛ ما نراه بالعين المجردة لا يمثل سوى قمة الجبل. استكشف الفروق العلمية والتقنية بين طبقات الإنترنت الأربع.
+          </p>
+        </div>
+
+        <div class="depth-meter-container">
+          <!-- Depth Selector Ruler -->
+          <div class="depth-ruler">
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-dim);margin-bottom:12px;font-family:var(--font-mono);">DEPTH_INDEX (METERS):</div>
+              <div class="depth-marker surface-mark active" data-layer="surface">
+                <div>
+                  <div class="title">الإنترنت السطحي</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted)">Surface Web</div>
+                </div>
+                <div class="depth-val">0m (4%)</div>
+              </div>
+
+              <div class="depth-marker deep-mark" data-layer="deep" style="margin-top:10px;">
+                <div>
+                  <div class="title">الإنترنت العميق</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted)">Deep Web</div>
+                </div>
+                <div class="depth-val">-200m (90%+)</div>
+              </div>
+
+              <div class="depth-marker dark-mark" data-layer="dark" style="margin-top:10px;">
+                <div>
+                  <div class="title">الإنترنت المظلم</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted)">Dark Web</div>
+                </div>
+                <div class="depth-val">-1000m (1%)</div>
+              </div>
+
+              <div class="depth-marker mariana-mark" data-layer="mariana" style="margin-top:10px;">
+                <div>
+                  <div class="title">ويب ماريانا (المارلين)</div>
+                  <div style="font-size:0.75rem;color:var(--text-muted)">Mariana's Trench</div>
+                </div>
+                <div class="depth-val">-11,000m [MYTH/REAL]</div>
+              </div>
+            </div>
+
+            <div style="padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.75rem;color:var(--text-dim);">
+              اضغط على أي طبقة لعرض تفاصيلها التقنية وأسرارها الأمنية.
+            </div>
+          </div>
+
+          <!-- Layer Content Panel -->
+          <div class="depth-content-panel">
+            
+            <!-- 1. Surface Web -->
+            <div id="layer-surface" class="layer-display-card active">
+              <div class="layer-header-strip">
+                <h3>
+                  <span>🌊</span>
+                  <span>الإنترنت السطحي (Surface Web / Clear Web)</span>
+                </h3>
+                <span class="layer-ratio-badge" style="background:rgba(56,189,248,0.2);color:#38bdf8;border:1px solid #38bdf8;">
+                  الحجم: 4% - 5% فقط
+                </span>
+              </div>
+              <p class="layer-description">
+                الجزء الظاهر والمرئي للعامة من الشبكة العنكبوتية. يشمل جميع المواقع والصفحات التي تقوم محركات البحث العامة (مثل Google و Bing و DuckDuckGo) بفهرستها وأرشفتها عبر زواحف الويب (Web Crawlers).
+              </p>
+              <div class="layer-spec-grid">
+                <div class="layer-spec-item">
+                  <span class="label">طريقة الوصول</span>
+                  <span class="value">المتصفحات القياسية (Chrome, Firefox, Safari)</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">البروتوكولات</span>
+                  <span class="value">HTTP / HTTPS / DNS القياسي</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">الخصوصية</span>
+                  <span class="value">منخفضة (تتبع ملفات الكوكيز وعناوين IP)</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">أمثلة</span>
+                  <span class="value">Wikipedia, الأخبار, المدونات, المتاجر العامة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Deep Web -->
+            <div id="layer-deep" class="layer-display-card">
+              <div class="layer-header-strip">
+                <h3>
+                  <span>⚓</span>
+                  <span>الإنترنت العميق (Deep Web)</span>
+                </h3>
+                <span class="layer-ratio-badge" style="background:rgba(59,130,246,0.2);color:#3b82f6;border:1px solid #3b82f6;">
+                  الحجم: 90% - 95% من الإنترنت
+                </span>
+              </div>
+              <p class="layer-description">
+                العمود الفقري الحقيقي للإنترنت. يضم كافة المحتويات وقواعد البيانات غير المفهرسة في محركات البحث نظراً لوجودها خلف حواجز مصادقة (Logins)، جدران نارية، أو معايير أمان خاصة. ليس ممنوعاً أو شريراً، بل هو صمام الأمان الذي يحمي خصوصية البشرية ومعاملاتها اليومية.
+              </p>
+              <div class="layer-spec-grid">
+                <div class="layer-spec-item">
+                  <span class="label">طريقة الوصول</span>
+                  <span class="value">تسجيل الدخول والتفويض وصلاحيات API</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">الأمان</span>
+                  <span class="value">عالي (تشفير SSL/TLS, قواعد بيانات محمية)</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">الشرعية القانونية</span>
+                  <span class="value">قانوني 100% وضروري لتشغيل البنوك والمؤسسات</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">أمثلة رئيسية</span>
+                  <span class="value">الحسابات المصرفية، السجلات الطبية، السحب الخاصة</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Dark Web -->
+            <div id="layer-dark" class="layer-display-card">
+              <div class="layer-header-strip">
+                <h3>
+                  <span>🧅</span>
+                  <span>الإنترنت المظلم (Dark Web)</span>
+                </h3>
+                <span class="layer-ratio-badge" style="background:rgba(168,85,247,0.2);color:#a855f7;border:1px solid #a855f7;">
+                  الحجم: أقل من 1% من الديب ويب
+                </span>
+              </div>
+              <p class="layer-description">
+                شبكة متراكبة (Overlay Network) مخصصة ومتعمدة لا يمكن دخولها بالمتصفحات العادية، بل تتطلب برمجيات تشفير خاصة مثل شبكة البصل (Tor Browser)، شبكة I2P، أو Freenet. تعتمد على تشفير متعدد الطبقات لإخفاء هوية المرسل والمستقبل ومسار حزم البيانات.
+              </p>
+              <div class="layer-spec-grid">
+                <div class="layer-spec-item">
+                  <span class="label">امتداد العناوين</span>
+                  <span class="value mono">.onion / .i2p</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">التشفير</span>
+                  <span class="value">Onion Routing (3 عقد تتابع مشفرة)</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">الاستخدام الإيجابي</span>
+                  <span class="value">حماية الصحفيين، المبلغين عن الفساد، ومقاومة الرقابة</span>
+                </div>
+                <div class="layer-spec-item">
+                  <span class="label">الجانب المظلم</span>
+                  <span class="value">أسواق غير مشروعة، تسريبات أمنية، واختراقات</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Mariana Web -->
+            <div id="layer-mariana" class="layer-display-card">
+              <div class="layer-header-strip">
+                <h3>
+                  <span>🔱</span>
+                  <span>ويب ماريانا / المارلين (Mariana's Web)</span>
+                </h3>
+                <span class="layer-ratio-badge" style="background:rgba(239,68,68,0.2);color:#ef4444;border:1px solid #ef4444;">
+                  الأساطير الرقمية والواقع الأمني
+                </span>
+              </div>
+              <p class="layer-description">
+                سُمي تيمناً بـ "خندق ماريانا" (أعمق نقطة محيطية في كوكب الأرض). في الميثولوجيا الرقمية لمنتديات الإنترنت، يُزعم أنه المستوى الخامس أو السادس الذي يحتوي على أخطر أسرار العالم والذكاء الاصطناعي الذاتي. إليك التحليل العلمي الدقيق لفك الشفرة:
+              </p>
+
+              <div class="myth-vs-reality-box">
+                <h4>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  مقارنة حاسمة: الخرافة الشائعة مقابل الواقع التقني والسيبراني
+                </h4>
+                
+                <div class="m-vs-r-grid">
+                  <div class="m-side">
+                    <h5>❌ الأسطورة (Myth):</h5>
+                    <p style="font-size:0.88rem;color:#fca5a5;line-height:1.7;">
+                      • يدعون وجود خوارزمية مستحيلة رياضياً تُدعى "Polymeric Falcighun".<br>
+                      • يزعمون أن الدخول إليه يتطلب حواسيب كمومية (Quantum Computers) غير موجودة للبشر.<br>
+                      • يدعون أنه مستودع لكيان ذكاء اصطناعي واعي ومخلوقات فضائية.
+                    </p>
+                  </div>
+
+                  <div class="r-side">
+                    <h5>✓ الواقع التقني في الأمن القومي (Reality):</h5>
+                    <p style="font-size:0.88rem;color:#86efac;line-height:1.7;">
+                      • لا توجد شبكة عالمية سحرية؛ بل توجد <strong>شبكات معزولة هوائياً (Air-Gapped Networks)</strong> لا ترتبط بأسلاك الإنترنت أصلاً.<br>
+                      • شبكات دفاعية استخباراتية مشفرة مغلقة مثل شبكة <strong>SIPRNet</strong> و <strong>JWICS</strong> العسكرية.<br>
+                      • تقنيات توزيع المفاتيح الكمومية (Quantum Key Distribution - QKD) التي تعتمد على فيزياء الفوتونات لرصد أي محاولة تنصت.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MODULE 3: STARLINK TECHNOLOGICAL EVOLUTION & CYBER RESILIENCE
+         ========================================== -->
+    <section id="starlink-tech" class="starlink-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">MODULE 03 // تكنولوجيا الفضاء</span>
+          <h2 class="section-title">التطور التكنولوجي لجهاز ستارلينك ومميزاته الفضائية</h2>
+          <p class="section-desc">
+            كيف غيرت منظومة أقمار ستارلينك ذات المدار الأرضي المنخفض (LEO) مفهوم الاتصالات العالمية والأمن السيبراني، مع استعراض الفيديو وورقة المواصفات الفنية المعتمدة.
+          </p>
+        </div>
+
+        <!-- Video & PDF Showcase Box -->
+        <div class="starlink-hero-box" id="starlink-video-anchor">
+          <div class="starlink-media-grid">
+            
+            <!-- Video Player Component (Hosting videoplayback (4).mp4) -->
+            <div class="video-player-wrapper">
+              <span class="video-badge-tag">STARLINK_DEMO // MP4_HD</span>
+              <div class="video-container">
+                <video id="customVideo" preload="metadata" playsinline>
+                  <source src="videoplayback (4).mp4" type="video/mp4">
+                  متصفحك لا يدعم وسم الفيديو.
+                </video>
+                <div class="video-overlay-play" id="videoPlayOverlay">
+                  <svg viewBox="0 0 24 24">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Custom Cyber Controls -->
+              <div class="video-custom-controls">
+                <button class="ctrl-btn" id="videoPlayBtn" title="تشغيل / إيقاف مؤقت">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <div class="video-timeline" id="videoTimeline">
+                  <div class="video-timeline-progress" id="videoProgress"></div>
+                </div>
+                <span class="video-time-text" id="videoTimeText">0:00 / 0:35</span>
+                <button class="ctrl-btn" id="videoMuteBtn" title="كتم / تشغيل الصوت">
+                  <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                </button>
+                <button class="ctrl-btn" id="videoFullscreenBtn" title="شاشة كاملة">
+                  <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Summary & PDF Specs Download Hub -->
+            <div class="starlink-summary-box">
+              <div class="hero-pill" style="margin-bottom:1rem;">
+                <span class="pulse-dot"></span>
+                <span>SpaceX Starlink Gen 3 Standard</span>
+              </div>
+              <h3>المواصفات القياسية وحرية الاتصال الفضائي</h3>
+              <p>
+                جهاز ستارلينك القياسي الجديد يمثل قفزة هندسية استغنت تماماً عن المحركات الميكانيكية المعقدة، مستبدلة إياها بمصفوفة طورية إلكترونية فائقة الذكاء تتصل بآلاف الأقمار الصناعية المتحركة في مدار أرضي منخفض (550 كم).
+              </p>
+
+              <!-- PDF Download & View Card -->
+              <div class="pdf-download-card">
+                <div class="pdf-file-info">
+                  <div class="pdf-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zm4.5 1.5h1v-2h-1v2zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/>
+                    </svg>
+                  </div>
+                  <div class="pdf-meta">
+                    <h5>كتيب المواصفات القياسية الرسمي</h5>
+                    <span>specification_sheet_standard_ar-SA.pdf (593 KB)</span>
+                  </div>
+                </div>
+
+                <div class="pdf-actions">
+                  <a href="specification_sheet_standard_ar-SA.pdf" download="Starlink_Standard_Specification_ar.pdf" class="btn-primary" style="padding:8px 14px;font-size:0.85rem;" title="تنزيل الملف المرفق">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    تحميل PDF
+                  </a>
+                  <button id="openPdfModalBtn" class="btn-outline" style="padding:8px 14px;font-size:0.85rem;">
+                    معاينة سريعة
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quick Highlight Badge -->
+              <div style="background:rgba(0,0,0,0.3);padding:1rem;border-radius:var(--radius-sm);border-right:3px solid var(--cyan);">
+                <div style="font-size:0.85rem;color:var(--cyan);font-weight:700;margin-bottom:4px;">💡 القيمة المضافة لرواد الأمن السيبراني:</div>
+                <div style="font-size:0.85rem;color:var(--text-muted);">
+                  يوفر ستارلينك اتصالاً مشفراً ومستقلاً عن شبكات الاتصال الأرضية المحلية، مما يجعله خط دفاع طوارئ حاسم في حالات انقطاع الكابلات البحرية أو الهجمات السيبرانية على مزودي الخدمة (ISPs).
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Detailed Specs Extracted directly from specification_sheet_standard_ar-SA.pdf -->
+          <div class="specs-sheet-grid">
+            <!-- Antenna Card -->
+            <div class="spec-sheet-card">
+              <div class="card-top">
+                <div class="spec-icon">📡</div>
+                <div>
+                  <h4>مواصفات الهوائي (Dish)</h4>
+                  <span class="mono" style="font-size:0.75rem;color:var(--cyan);">ELECTRONIC PHASED ARRAY</span>
+                </div>
+              </div>
+              <ul class="spec-points-list">
+                <li><span>نوع المصفوفة:</span> <span>مصفوفة طورية إلكترونية</span></li>
+                <li><span>مجال الرؤية:</span> <span>110 درجات</span></li>
+                <li><span>التوجيه:</span> <span>مساعدة برمجية بدون محركات</span></li>
+                <li><span>تصنيف الحماية:</span> <span>IP67 (غمر وأتربة)</span></li>
+                <li><span>الوزن الصافي:</span> <span>2.9 كغم (3.2 بالمسند)</span></li>
+                <li><span>إذابة الجليد:</span> <span>حتى 40 مم/ساعة</span></li>
+              </ul>
+            </div>
+
+            <!-- Router Card -->
+            <div class="spec-sheet-card">
+              <div class="card-top">
+                <div class="spec-icon">📶</div>
+                <div>
+                  <h4>راوتر الجيل الثالث (Gen 3)</h4>
+                  <span class="mono" style="font-size:0.75rem;color:var(--green);">WI-FI 6 TRI-BAND</span>
+                </div>
+              </div>
+              <ul class="spec-points-list">
+                <li><span>معيار الوايفاي:</span> <span>Wi-Fi 6 (802.11ax)</span></li>
+                <li><span>تقنية الهوائيات:</span> <span>4x4 MU-MIMO ثلاثي النطاق</span></li>
+                <li><span>منافذ الإيثرنت:</span> <span>2x RJ45 Gigabit Ethernet</span></li>
+                <li><span>حماية الراوتر:</span> <span>IP56 (مقاومة رذاذ)</span></li>
+                <li><span>الأمان اللاسلكي:</span> <span>WPA2 / WPA3</span></li>
+                <li><span>تغطية المساحة:</span> <span>حتى 297 متر مربع</span></li>
+              </ul>
+            </div>
+
+            <!-- Environmental Card -->
+            <div class="spec-sheet-card">
+              <div class="card-top">
+                <div class="spec-icon">🌪️</div>
+                <div>
+                  <h4>الصمود البيئي والمناخي</h4>
+                  <span class="mono" style="font-size:0.75rem;color:var(--amber);">EXTREME ENVIRONMENT</span>
+                </div>
+              </div>
+              <ul class="spec-points-list">
+                <li><span>درجة حرارة التشغيل:</span> <span>-30°C إلى +50°C</span></li>
+                <li><span>مقاومة الرياح:</span> <span>تتجاوز 96 كم/ساعة</span></li>
+                <li><span>كابل التوصيل:</span> <span>طول 15 متر مقاوم للطقس</span></li>
+                <li><span>استهلاك الطاقة:</span> <span>متوسط 75 - 100 واط</span></li>
+                <li><span>جهد الإدخال:</span> <span>100-240V ~ 2.5A</span></li>
+                <li><span>وزن العبوة بالكامل:</span> <span>6.73 كغم</span></li>
+              </ul>
+            </div>
+
+            <!-- Space Constellation Card -->
+            <div class="spec-sheet-card">
+              <div class="card-top">
+                <div class="spec-icon">🛰️</div>
+                <div>
+                  <h4>المدار الأرضي المنخفض (LEO)</h4>
+                  <span class="mono" style="font-size:0.75rem;color:var(--purple);">550 KM ALTITUDE</span>
+                </div>
+              </div>
+              <ul class="spec-points-list">
+                <li><span>زمن الاستجابة (Latency):</span> <span>25 - 45 مللي ثانية</span></li>
+                <li><span>سرعة التحميل:</span> <span>150 - 250+ ميجابت/ث</span></li>
+                <li><span>الروابط بين الأقمار:</span> <span>Space Laser Mesh</span></li>
+                <li><span>التشفير الفضائي:</span> <span>تشفير طرفي كامل E2EE</span></li>
+                <li><span>مقاومة التشويش:</span> <span>تحديثات برمجية سريعة</span></li>
+                <li><span>الاعتمادية:</span> <span>مستقل عن الكابلات الأرضية</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Starlink Cybersecurity Dimension Section -->
+          <div class="starlink-cyber-defense">
+            <div class="cyber-defense-head">
+              <div class="shield-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 style="font-size:1.4rem;color:#fff;">البعد الأمني والسيبراني لمنظومة ستارلينك</h3>
+                <p style="color:var(--text-muted);font-size:0.95rem;">
+                  كيف أثبت ستارلينك تفوقه في مواجهة الحرب الإلكترونية وهجمات التشويش السيبراني المتقدمة؟
+                </p>
+              </div>
+            </div>
+
+            <div class="defense-pillars-grid">
+              <div class="defense-pillar-item">
+                <h5>مقاومة التشويش الإلكتروني الميداني (Anti-Jamming Resilience)</h5>
+                <p>أثناء النزاعات العسكرية، أثبتت منظومة ستارلينك قدرتها على إحباط هجمات الحرب الإلكترونية والتشويش الروسي في غضون ساعات قليلة عبر تحديثات سريعة للشفرة البرمجية الثابتة (Firmware Updates) وتغيير خوارزميات التردد اللحظية.</p>
+              </div>
+              <div class="defense-pillar-item">
+                <h5>روابط الليزر الفضائي (Optical Inter-Satellite Links)</h5>
+                <p>تتواصل أقمار ستارلينك فيما بينها عبر حزم ليزرية في فراغ الفضاء، ما يعني أن البيانات تسافر بسرعة الضوء في الفراغ بدون المرور بمحطات وسيطة في دول قد تمارس الرقابة أو التنصت السيبراني.</p>
+              </div>
+              <div class="defense-pillar-item">
+                <h5>عزل المحطة الطرفية وتشفير الإشارات (Secure Phased Array)</h5>
+                <p>الهوائي لا يرسل إشاراته في جميع الاتجاهات، بل يشكل حزمة راديوية مركزة ودقيقة جداً (Beamforming) تتجه مباشرة للقمر الصناعي، مما يجعل التقاط الإشارة أو التنصت عليها من الأرض أمراً بالغ الصعوبة تقنياً.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technology Comparison Table -->
+          <div class="comparison-section">
+            <h3 style="font-size:1.3rem;margin-bottom:1rem;color:#fff;">مقارنة تقنية: ستارلينك (LEO) مقابل الأقمار التقليدية (GEO) والألياف الضوئية</h3>
+            <div class="table-responsive">
+              <table class="cyber-table">
+                <thead>
+                  <tr>
+                    <th>وجه المقارنة</th>
+                    <th>ستارلينك (Starlink LEO)</th>
+                    <th>الأقمار التقليدية (GEO Satellite)</th>
+                    <th>كابلات الألياف الضوئية (Fiber Optic)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>ارتفاع المدار</strong></td>
+                    <td>550 كم (مدار منخفض)</td>
+                    <td>35,786 كم (مدار ثابت بعيد)</td>
+                    <td>أرضي / بحري (0 كم)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>زمن الاستجابة (Latency)</strong></td>
+                    <td><span class="text-green">25 - 45 مللي ثانية</span></td>
+                    <td><span class="text-red">600 - 800+ مللي ثانية</span></td>
+                    <td><span class="text-cyan">5 - 20 مللي ثانية</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>مقاومة القطع الفيزيائي</strong></td>
+                    <td><span class="text-green">عالية جداً (في الفضاء)</span></td>
+                    <td>عالية (مع بطء شديد)</td>
+                    <td><span class="text-red">معرضة لقطع الكابلات البحرية والزلازل</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>التوجيه والمحركات</strong></td>
+                    <td>مصفوفة إلكترونية رقمية بدون محركات</td>
+                    <td>صحن ضخم يحتاج توجيه دقيق ثابت</td>
+                    <td>راوترات ومحولات أرضية</td>
+                  </tr>
+                  <tr>
+                    <td><strong>الصمود السيبراني في الأزمات</strong></td>
+                    <td><span class="text-green">فائق (بديل إنقاذ مستقل)</span></td>
+                    <td>متوسط (غير مناسب للتطبيقات الحساسة)</td>
+                    <td>مرتبط بمزودي الخدمة المركزيين والحكومات</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ==========================================
+         MODULE 5: SEMINAR QUIZ & CERTIFICATE GENERATOR
+         ========================================== -->
+    <section id="quiz-section" class="tools-section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag">EVALUATION // التقييم والشهادة</span>
+          <h2 class="section-title">اختبار استيعاب الندوة وإصدار الشهادة</h2>
+          <p class="section-desc">
+            أجب عن الأسئلة الخمسة التفاعلية لقياس فهمك لمحاور الندوة (الهكر الأخلاقي، طبقات الويب، وستارلينك)، ثم احصل على شهادة حضور رسمية باسمك قابلة للطباعة!
+          </p>
+        </div>
+
+        <div class="quiz-wrapper" id="quizContainer">
+          
+          <!-- Step 1: Active Questions -->
+          <div id="quizStepBox" class="quiz-step active">
+            <div class="quiz-question-box">
+              <span class="quiz-q-num" id="quizQuestionNumber">السؤال 1 من 5</span>
+              <div class="quiz-q-text" id="quizQuestionText">جاري تحميل السؤال...</div>
+              
+              <div class="quiz-options-list" id="quizOptionsContainer">
+                <!-- Dynamically populated via JS -->
+              </div>
+
+              <div class="quiz-explanation" id="quizExplanation"></div>
+            </div>
+
+            <div style="text-align:left;">
+              <button id="quizNextBtn" class="btn-primary" style="display:none;">
+                <span>السؤال التالي</span>
+                <span class="mono">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Result & Certificate Form -->
+          <div id="quizResultBox" class="quiz-step">
+            <div style="text-align:center;margin-bottom:2rem;">
+              <div style="font-size:3rem;margin-bottom:0.5rem;">🎉</div>
+              <h3 style="font-size:1.8rem;color:#fff;">أحسنت! أتممت اختبار الندوة بنجاح</h3>
+              <p style="color:var(--text-muted);margin-bottom:1rem;">نتيجتك في التقييم النهائي:</p>
+              <div style="font-size:2.5rem;font-weight:900;color:var(--cyan);font-family:var(--font-mono);" id="quizFinalScore">5 / 5</div>
+              <div id="quizScoreBadge" style="font-weight:700;margin-top:0.5rem;font-size:1.1rem;"></div>
+            </div>
+
+            <!-- Name Input for Certificate -->
+            <div style="max-width:500px;margin:0 auto 2.5rem;background:rgba(0,0,0,0.4);padding:1.75rem;border-radius:var(--radius-md);border:1px solid var(--border-subtle);">
+              <label for="attendeeNameInput" style="display:block;margin-bottom:8px;font-weight:700;color:#fff;">
+                اكتب اسمك الكامل لإصدار شهادة الحضور:
+              </label>
+              <div style="display:flex;gap:10px;">
+                <input type="text" id="attendeeNameInput" placeholder="مثال: م. محمد شعبان" style="flex:1;background:#060c16;border:1px solid var(--border-neon);padding:10px 14px;border-radius:8px;color:#fff;font-family:var(--font-arabic);font-size:1rem;outline:none;">
+                <button id="generateCertBtn" class="btn-primary" style="white-space:nowrap;">
+                  إصدار الشهادة 📜
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Printable Certificate Container -->
+            <div id="certificateDisplaySection" style="display:none;">
+              <div class="certificate-preview-box" id="printableCertificate">
+                <div class="cert-corner-ornament top-left"></div>
+                <div class="cert-corner-ornament top-right"></div>
+                <div class="cert-corner-ornament bottom-left"></div>
+                <div class="cert-corner-ornament bottom-right"></div>
+
+                <div class="cert-header">
+                  <div style="font-size:1rem;letter-spacing:2px;color:var(--cyan);margin-bottom:4px;font-family:var(--font-mono);">CYBERSECURITY & SATELLITE TECH SUMMIT</div>
+                  <h2>شهادة حضور واجتياز الندوة التوعوية</h2>
+                  <p>تُمنح هذه الشهادة تقديراً للمشاركة الفعالة وإتمام محاور ندوة:</p>
+                </div>
+
+                <div style="font-size:1.2rem;font-weight:700;color:var(--cyan);margin-top:6px;">
+                  "الهكر الأخلاقي، أعماق الإنترنت، وثورة ستارلينك الفضائية"
+                </div>
+
+                <div class="cert-recipient-name" id="certNameDisplay">
+                  اسم المشارك الكريم
+                </div>
+
+                <p class="cert-body-text">
+                  قد اجتاز بنجاح كافة محاور الندوة والتي شملت: أخلاقيات ومنهجية اختبار الاختراق، الفرق بين القبعات الأمنية، تفنيد أساطير الويب المظلم وماريانا، والتحليل التقني والسيبراني لمنظومة أقمار ستارلينك LEO.
+                </p>
+
+                <div class="cert-footer-meta">
+                  <div>
+                    <strong>تاريخ الانعقاد:</strong>
+                    <div id="certDateDisplay">8 نوفمبر 2026</div>
+                  </div>
+                  <div>
+                    <strong>الاعتماد والتحقق:</strong>
+                    <div class="mono" style="color:var(--green)">VERIFIED // SEC-2026-ETH</div>
+                  </div>
+                  <div>
+                    <strong>رئيس لجنة الندوة:</strong>
+                    <div>لجنة بحوث الأمن السيبراني</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="text-align:center;">
+                <button id="printCertBtn" class="btn-primary" style="padding:12px 28px;font-size:1.05rem;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  طباعة الشهادة أو الحفظ بتنسيق PDF
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PDF Preview Modal -->
+  <div class="modal-overlay" id="pdfModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h4>معاينة ورقة المواصفات القياسية الرسمية لجهاز ستارلينك</h4>
+        <button class="modal-close-btn" id="closePdfModalBtn" title="إغلاق">&times;</button>
+      </div>
+      <div class="modal-body-pdf">
+        <iframe src="specification_sheet_standard_ar-SA.pdf" title="Starlink Standard Spec Sheet"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="cyber-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>ندوة الهكر الأخلاقي والأمن السيبراني</h4>
+          <p>
+            مبادرة توعوية وتعليمية متقدمة تهدف إلى نشر ثقافة الدفاع السيبراني الإيجابي، واستكشاف أحدث التكنولوجيات الفضائية المتمثلة في شبكة ستارلينك.
+          </p>
+          <div style="margin-top:1rem;font-size:0.8rem;color:var(--text-dim);font-family:var(--font-mono);">
+            STATUS: AIR-GAPPED & CERTIFIED
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>فصول الندوة</h5>
+          <ul class="footer-links">
+            <li><a href="#ethical-hacking">الهكر الأخلاقي والمراحل الـ 5</a></li>
+            <li><a href="#internet-layers">طبقات الإنترنت (السطحي، الديب، الدارك)</a></li>
+            <li><a href="#internet-layers">فك لغز ويب ماريانا (المارلين)</a></li>
+            <li><a href="#starlink-tech">التطور التكنولوجي لستارلينك</a></li>
+            <li><a href="#terminal-section">الطرفية التفاعلية المباشرة</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>المرفقات والملفات</h5>
+          <ul class="footer-links">
+            <li><a href="videoplayback (4).mp4" target="_blank">فيديو استعراض ستارلينك (MP4)</a></li>
+            <li><a href="specification_sheet_standard_ar-SA.pdf" target="_blank">المواصفات القياسية لستارلينك (PDF)</a></li>
+            <li><a href="#quiz-section">اختبار الندوة والشهادة</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة@ وحدة السكان بديوان عام محافظه الأقصر
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/matrix.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/depth-explorer.js"></script>
+  <script src="js/quiz-certificate.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
